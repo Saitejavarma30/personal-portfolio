@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import AboutLottie from "../lottieFiles/about";
 import CoffeeSip from "../lottieFiles/coffeeSip";
 import { IconRenderer } from "./Icon";
@@ -11,7 +12,6 @@ import {
   ImageConatiner,
   MainContainer,
   NameSpan,
-  SkillItem,
   SkillsContainer,
   SkillsContent,
   SkillsHeader,
@@ -22,14 +22,29 @@ import icons from "./utils";
 //@ts-ignore
 // import CoffeeSip from "../lottieFiles/coffeeSip.svg";
 
-const Home = () => {
+const HeroSection = () => {
   return (
-    <MainContainer>
+    <motion.div
+      initial={{ opacity: 0, scale: 1 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+    >
       <HeroContainer>
         <ImageConatiner>
-          <CoffeeSip />
+          <motion.div
+            initial={{ opacity: 0.5, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <CoffeeSip />
+          </motion.div>
         </ImageConatiner>
-        <TextContainer>
+
+        <TextContainer
+          initial={{ filter: "blur(10px)" }}
+          whileInView={{ filter: "blur(0px)" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <div>
             Hello I'm <NameSpan>Saiteja Varma</NameSpan>
           </div>
@@ -45,8 +60,23 @@ const Home = () => {
           </div>
         </TextContainer>
       </HeroContainer>
+    </motion.div>
+  );
+};
+
+const AboutSection = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 1 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 2.5 }}
+    >
       <AboutContainer>
-        <TextContainer>
+        <TextContainer
+          initial={{ opacity: 0.5, scale: 0.7 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <AboutHeader>
             About <NameSpan>Me</NameSpan>
           </AboutHeader>
@@ -72,22 +102,47 @@ const Home = () => {
           </AboutContent>
         </TextContainer>
         <ImageConatiner>
-          <AboutLottie />
+          <motion.div
+            initial={{ opacity: 0.5, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2 }}
+          >
+            <AboutLottie />
+          </motion.div>
         </ImageConatiner>
       </AboutContainer>
-      <SkillsContainer>
-        <SkillsSubContainer>
-          <SkillsHeader>
-            My <NameSpan>Skills</NameSpan>
-          </SkillsHeader>
-          <SkillsContent>
-            {icons.map(({ Icon, name }) => {
-              //@ts-ignore
-              return <IconRenderer Icon={Icon} name={name || "black"} />;
-            })}
-          </SkillsContent>
-        </SkillsSubContainer>
-      </SkillsContainer>
+    </motion.div>
+  );
+};
+
+const SkillsSection = () => {
+  return (
+    <SkillsContainer>
+      <SkillsSubContainer
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2 }}
+      >
+        <SkillsHeader>
+          My <NameSpan>Skills</NameSpan>
+        </SkillsHeader>
+        <SkillsContent>
+          {icons.map(({ Icon, name }) => {
+            //@ts-ignore
+            return <IconRenderer Icon={Icon} name={name || "black"} />;
+          })}
+        </SkillsContent>
+      </SkillsSubContainer>
+    </SkillsContainer>
+  );
+};
+
+const Home = () => {
+  return (
+    <MainContainer>
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
     </MainContainer>
   );
 };

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
@@ -29,7 +30,7 @@ export const HeroContainer = styled.div`
   }
 `;
 
-export const TextContainer = styled.div`
+export const TextContainer = styled(motion.div)`
   font-size: 32px;
   width: 50%;
   color: black;
@@ -158,7 +159,7 @@ export const SkillsContent = styled.div`
   }
 `;
 
-export const SkillsSubContainer = styled.div`
+export const SkillsSubContainer = styled(motion.div)`
   font-size: 32px;
   width: 80%;
   color: black;
