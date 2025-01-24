@@ -29,6 +29,7 @@ export const TextContainer = styled(motion.div)`
   font-optical-sizing: auto;
   font-style: normal;
   padding: 32px;
+  font-display: swap;
   @media screen and (max-width: 768px) {
     font-size: 24px;
     width: 100%;
@@ -43,6 +44,7 @@ export const Headingtext = styled.div`
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  font-display: swap;
 `;
 
 export const EducationCard = styled.div`

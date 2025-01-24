@@ -36,6 +36,7 @@ export const TextContainer = styled(motion.div)`
   color: black;
   text-align: center;
   font-family: "Playfair Display", serif;
+  font-display: swap;
   font-optical-sizing: auto;
   font-style: normal;
   padding: 32px;
@@ -106,6 +107,7 @@ export const AboutText = styled.div`
   padding-bottom: 8px;
   font-weight: 100;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-display: swap;
   @media screen and (max-width: 1100px) {
     font-size: 20px;
   }
@@ -136,6 +138,7 @@ export const SkillsHeader = styled.h2`
   font-size: 32px;
   color: black;
   font-family: "Playfair Display", serif;
+  font-display: swap;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 200;
@@ -165,6 +168,7 @@ export const SkillsSubContainer = styled(motion.div)`
   color: black;
   text-align: center;
   font-family: "Playfair Display", serif;
+  font-display: swap;
   font-optical-sizing: auto;
   font-style: normal;
   padding: 32px;

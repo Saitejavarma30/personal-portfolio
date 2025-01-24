@@ -49,6 +49,7 @@ export const NavItem = styled(motion.div)`
 export const NameContainer = styled.a`
   font-size: 24px;
   font-family: "Agu Display", serif;
+  font-display: swap;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -73,6 +74,7 @@ export const NavBarClose = styled.button`
   font-size: large;
   font-style: normal;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-display: swap;
 `;
 
 export const NavbarOpenContainer = styled(motion.div)`
