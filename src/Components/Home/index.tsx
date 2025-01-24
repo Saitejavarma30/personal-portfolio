@@ -29,8 +29,8 @@ const HeroSection = () => {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
-      <HeroContainer>
-        <ImageConatiner>
+      <HeroContainer aria-label="Hero Section" role="banner">
+        <ImageConatiner aria-hidden="true">
           <motion.div
             initial={{ opacity: 0.5, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -46,17 +46,25 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <div>
-            Hello I'm <NameSpan>Saiteja Varma</NameSpan>
+            <span aria-label="Introduction">
+              Hello I'm <NameSpan>Saiteja Varma</NameSpan>
+            </span>
           </div>
           <div>
-            Full Stack <DevSpan>Developer</DevSpan>
+            <span aria-label="Occupation">
+              Full Stack <DevSpan>Developer</DevSpan>
+            </span>
           </div>
           <div>&</div>
           <div>
-            part-time <DevSpan>Photographer</DevSpan>
+            <span aria-label="Part-time job">
+              part-time <DevSpan>Photographer</DevSpan>
+            </span>
           </div>
           <div>
-            Based in <NameSpan>India</NameSpan>
+            <span aria-label="Location">
+              Based in <NameSpan>India</NameSpan>
+            </span>
           </div>
         </TextContainer>
       </HeroContainer>
@@ -77,28 +85,34 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <AboutHeader>
+          <AboutHeader aria-label="About Me">
             About <NameSpan>Me</NameSpan>
           </AboutHeader>
-          <AboutContent>
-            <AboutText>
-              I'm a passionate, self-proclaimed designer who specializes in full
-              stack development (React.js & Node.js). I am very enthusiastic
-              about bringing the technical and visual aspects of digital
-              products to life. User experience, pixel perfect design, and
-              writing clear, readable, highly performant code matters to me.
-            </AboutText>
-            <AboutText>
-              I began my journey as a web developer in 2022, and since then,
-              I've continued to grow and evolve as a developer, taking on new
-              challenges and learning the latest technologies along the way. I'm
-              building cutting-edge web applications using modern technologies
-              such as React.js, TypeScript, and Node.js.
-            </AboutText>
-            <AboutText>
-              When I'm not in full-on developer mode, you can find me hovering
-              around in National Parks following my passion for photography.
-            </AboutText>
+
+          <AboutContent role="region" aria-labelledby="about-section">
+            <section id="about-section">
+              <AboutText aria-label="Introduction to myself">
+                I'm a passionate, self-proclaimed designer who specializes in
+                full stack development (React.js & Node.js). I am very
+                enthusiastic about bringing the technical and visual aspects of
+                digital products to life. User experience, pixel perfect design,
+                and writing clear, readable, highly performant code matters to
+                me.
+              </AboutText>
+
+              <AboutText aria-label="My journey as a developer">
+                I began my journey as a web developer in 2022, and since then,
+                I've continued to grow and evolve as a developer, taking on new
+                challenges and learning the latest technologies along the way.
+                I'm building cutting-edge web applications using modern
+                technologies such as React.js, TypeScript, and Node.js.
+              </AboutText>
+
+              <AboutText aria-label="My hobbies outside development">
+                When I'm not in full-on developer mode, you can find me hovering
+                around in National Parks following my passion for photography.
+              </AboutText>
+            </section>
           </AboutContent>
         </TextContainer>
         <ImageConatiner>
@@ -106,6 +120,7 @@ const AboutSection = () => {
             initial={{ opacity: 0.5, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 2 }}
+            aria-label="About me animation"
           >
             <AboutLottie />
           </motion.div>

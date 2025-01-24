@@ -46,16 +46,17 @@ export const NavItem = styled(motion.div)`
   font-weight: bold;
 `;
 
-export const NameContainer = styled.div`
+export const NameContainer = styled.a`
   font-size: 24px;
   font-family: "Agu Display", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   cursor: pointer;
+  color: inherit;
 `;
 
-export const NavBarClose = styled(motion.div)`
+export const NavBarClose = styled.button`
   right: 0%;
   cursor: pointer;
   display: flex;
@@ -65,6 +66,13 @@ export const NavBarClose = styled(motion.div)`
   padding-left: 32px;
   padding-right: 32px;
   height: 48px;
+  background: transparent;
+  border: none;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: large;
+  font-style: normal;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 `;
 
 export const NavbarOpenContainer = styled(motion.div)`
