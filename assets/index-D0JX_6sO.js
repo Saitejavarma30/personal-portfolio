@@ -74,6 +74,7 @@ Error generating stack: `+f.message+`
   color: black;
   text-align: center;
   font-family: "Playfair Display", serif;
+  font-display: swap;
   font-optical-sizing: auto;
   font-style: normal;
   padding: 32px;
@@ -130,6 +131,7 @@ Error generating stack: `+f.message+`
   padding-bottom: 8px;
   font-weight: 100;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-display: swap;
   @media screen and (max-width: 1100px) {
     font-size: 20px;
   }
@@ -156,6 +158,7 @@ Error generating stack: `+f.message+`
   font-size: 32px;
   color: black;
   font-family: "Playfair Display", serif;
+  font-display: swap;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 200;
@@ -181,6 +184,7 @@ Error generating stack: `+f.message+`
   color: black;
   text-align: center;
   font-family: "Playfair Display", serif;
+  font-display: swap;
   font-optical-sizing: auto;
   font-style: normal;
   padding: 32px;
@@ -242,6 +246,7 @@ Error generating stack: `+f.message+`
 `,Ky=n2.a`
   font-size: 24px;
   font-family: "Agu Display", serif;
+  font-display: swap;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -264,6 +269,7 @@ Error generating stack: `+f.message+`
   font-size: large;
   font-style: normal;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-display: swap;
 `,Gy=n2(c3.div)`
   position: fixed;
   top: 0;
