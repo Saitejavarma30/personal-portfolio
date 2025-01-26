@@ -1,12 +1,31 @@
-import { ImageConatiner, MainContainer, NameSpan } from "../Home/styles";
+import { ImageConatiner, NameSpan } from "../Home/styles";
 import ExperinceLottie from "../lottieFiles/experience";
+import Card from "./card";
 
 import {
   EducationCard,
   EducationContainer,
+  ExperienceContainer,
   Headingtext,
+  MainContainer,
   TextContainer,
 } from "./styles";
+import { CARD_DATA } from "./utils";
+
+export const ExperienceContent = () => {
+  return (
+    <>
+      <ExperienceContainer>
+        <Headingtext>
+          <span>My </span> <NameSpan>Experience</NameSpan>
+        </Headingtext>
+        {CARD_DATA.map((card, index) => (
+          <Card key={index} {...card} />
+        ))}
+      </ExperienceContainer>
+    </>
+  );
+};
 
 const Experience: React.FC = () => {
   return (
@@ -15,7 +34,7 @@ const Experience: React.FC = () => {
         <EducationContainer>
           <TextContainer>
             <Headingtext>
-              My <NameSpan>Journey</NameSpan>
+              <span>My </span> <NameSpan>Journey</NameSpan>
             </Headingtext>
 
             <EducationCard>
@@ -30,6 +49,7 @@ const Experience: React.FC = () => {
             <ExperinceLottie />
           </ImageConatiner>
         </EducationContainer>
+        <ExperienceContent />
       </MainContainer>
     </>
   );

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  width: 100%;
   background-color: black;
   overflow-y: visible;
   overflow-x: hidden;

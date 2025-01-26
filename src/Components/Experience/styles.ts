@@ -25,6 +25,10 @@ export const TextContainer = styled(motion.div)`
   width: 50%;
   color: white;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -36,19 +40,36 @@ export const TextContainer = styled(motion.div)`
   }
 `;
 
-export const Headingtext = styled.div`
+export const MainContainer = styled.div`
+  background-color: black;
+  overflow-y: visible;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+`;
+
+export const Headingtext = styled.h2`
   font-size: 32px;
   width: 50%;
   color: white;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-display: swap;
+  font-weight: 100;
 `;
 
 export const EducationCard = styled.div`
-  border: 1px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,5 +79,21 @@ export const EducationCard = styled.div`
   border-radius: 8px;
   background-color: black;
   color: white;
-  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-display: swap;
+  @media screen and (max-width: 1100px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 16px;
+  }
+`;
+
+export const ExperienceContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 `;

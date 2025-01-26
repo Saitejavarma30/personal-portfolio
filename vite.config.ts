@@ -15,7 +15,7 @@ export default defineConfig({
     }),
     compression({ algorithm: "brotliCompress" }),
   ],
-  base: "personal-portfolio",
+  base: "/",
   build: {
     sourcemap: true,
   },

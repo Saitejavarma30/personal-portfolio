@@ -13,27 +13,33 @@ import {
 import BlurText from "../../blocks/TextAnimations/BlurText/BlurText";
 import { motion } from "framer-motion";
 import { hideNavItemsVariant, mobileMenuVariant } from "./utils";
+import { Link } from "react-router-dom";
 
 const MOBILE_NAV_ITEMS = [
   {
     id: 0,
     navTitle: "Home",
+    href: "/",
   },
   {
     id: 1,
-    navTitle: "About",
+    navTitle: "Experience",
+    href: "/experience",
   },
   {
     id: 2,
     navTitle: "Projects",
+    href: "/projects",
   },
   {
     id: 3,
     navTitle: "Photos",
+    href: "/photos",
   },
   {
     id: 4,
     navTitle: "Contact",
+    href: "/contact",
   },
 ];
 
@@ -79,7 +85,11 @@ const Navbar = () => {
           </NavBarClose>
           <NavItemContainer>
             {MOBILE_NAV_ITEMS.map((item) => (
-              <NavItem key={item.id}>{item.navTitle}</NavItem>
+              <NavItem key={item.id}>
+                <Link to={item.href} onClick={() => setIsOpen(false)}>
+                  {item.navTitle}
+                </Link>
+              </NavItem>
             ))}
           </NavItemContainer>
         </NavbarOpenContainer>

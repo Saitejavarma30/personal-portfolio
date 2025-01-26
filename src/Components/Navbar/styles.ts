@@ -11,6 +11,7 @@ export const MainContainer = styled.main`
   overflow: hidden;
   position: sticky;
   top: 0;
+  z-index: 1000;
 `;
 
 export const NavbarContainer = styled(motion.nav)<zIndexProps>`
