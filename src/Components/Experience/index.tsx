@@ -20,7 +20,7 @@ export const ExperienceContent = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        <Headingtext>
+        <Headingtext style={{ color: "white" }}>
           <span>My </span> <NameSpan>Experience</NameSpan>
         </Headingtext>
         {CARD_DATA.map((card, index) => (

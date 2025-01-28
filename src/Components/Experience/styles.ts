@@ -96,5 +96,6 @@ export const ExperienceContainer = styled(motion.div)`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 `;
