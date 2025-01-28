@@ -4,12 +4,12 @@ import { styled } from "styled-components";
 export const EducationContainer = styled(motion.div)`
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  color: white;
+  color: black;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -45,7 +45,7 @@ export const MainContainer = styled.div`
   overflow-y: visible;
   overflow-x: hidden;
   scrollbar-width: none;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -56,7 +56,7 @@ export const MainContainer = styled.div`
 export const Headingtext = styled.h2`
   font-size: 32px;
   width: 50%;
-  color: white;
+  color: black;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -77,8 +77,8 @@ export const EducationCard = styled.div`
   margin: 16px;
   padding: 16px;
   border-radius: 8px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 24px;
   font-display: swap;
@@ -90,10 +90,11 @@ export const EducationCard = styled.div`
   }
 `;
 
-export const ExperienceContainer = styled.div`
+export const ExperienceContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: 100vh;
 `;

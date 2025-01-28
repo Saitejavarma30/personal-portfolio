@@ -15,7 +15,11 @@ import { CARD_DATA } from "./utils";
 export const ExperienceContent = () => {
   return (
     <>
-      <ExperienceContainer>
+      <ExperienceContainer
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
         <Headingtext>
           <span>My </span> <NameSpan>Experience</NameSpan>
         </Headingtext>
