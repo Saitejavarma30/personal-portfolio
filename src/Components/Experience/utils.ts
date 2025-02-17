@@ -43,3 +43,6 @@ export const CARD_DATA = [
         requirements and enhancing its functionality and aesthetics.`,
   },
 ];
+
+
+

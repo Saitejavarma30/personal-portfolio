@@ -1,51 +1,54 @@
 import { ImageConatiner, NameSpan } from "../Home/styles";
 import ExperinceLottie from "../lottieFiles/experience";
-import Card from "./card";
+import Timeline from "../Timeline";
+
 
 import {
   EducationCard,
   EducationContainer,
-  ExperienceContainer,
   Headingtext,
   MainContainer,
   TextContainer,
 } from "./styles";
-import { CARD_DATA } from "./utils";
+import MetaBalls from "../../blocks/Animations/MetaBalls/MetaBalls.tsx";
 
 export const ExperienceContent = () => {
-  return (
-    <>
-      <ExperienceContainer
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <Headingtext style={{ color: "white" }}>
-          <span>My </span> <NameSpan>Experience</NameSpan>
-        </Headingtext>
-        {CARD_DATA.map((card, index) => (
-          <Card key={index} {...card} />
-        ))}
-      </ExperienceContainer>
-    </>
+  return (<div style={{position: "relative", width: "100%", display: "flex", flexWrap: "wrap"}}>
+        <div style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0}}>
+          <MetaBalls
+              color="#ffffff"
+              cursorBallColor="#ffffff"
+              cursorBallSize={1}
+              ballCount={2}
+              animationSize={90}
+              enableMouseInteraction={true}
+              hoverSmoothness={0.05}
+              clumpFactor={1}
+              speed={0.8}
+          />
+        </div>
+        <div style={{position: "relative", zIndex: 1, width: "100%", pointerEvents: "none"}}>
+          <Timeline/>
+        </div>
+      </div>
+
   );
 };
 
 const Experience: React.FC = () => {
   return (
-    <>
-      <MainContainer>
-        <EducationContainer>
-          <TextContainer>
-            <Headingtext>
-              <span>My </span> <NameSpan>Journey</NameSpan>
-            </Headingtext>
-
-            <EducationCard>
-              Graduated from IIT Bhubaneswar with a degree in Computer Science
-              and a love for problem-solving. Whether it’s building full-stack
-              applications or debugging code that refuses to cooperate, I’m here
-              to turn challenges into accomplishments—while keeping my caffeine
+      <>
+        <MainContainer>
+          <EducationContainer>
+            <TextContainer>
+              <Headingtext>
+                <span>My </span> <NameSpan>Journey</NameSpan>
+              </Headingtext>
+              <EducationCard>
+                Graduated from IIT Bhubaneswar with a degree in Computer Science
+                and a love for problem-solving. Whether it’s building full-stack
+                applications or debugging code that refuses to cooperate, I’m here
+                to turn challenges into accomplishments—while keeping my caffeine
               intake dangerously high.
             </EducationCard>
           </TextContainer>
@@ -54,6 +57,7 @@ const Experience: React.FC = () => {
           </ImageConatiner>
         </EducationContainer>
         <ExperienceContent />
+
       </MainContainer>
     </>
   );

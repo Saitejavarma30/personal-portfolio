@@ -1,0 +1,19 @@
+/*
+	jsrepo 1.37.0
+	Installed from https://reactbits.dev/ts/default/
+	17-2-2025
+*/
+
+.scroll-reveal {
+  margin: 20px 0;
+}
+
+.scroll-reveal-text {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.word {
+  display: inline-block;
+}

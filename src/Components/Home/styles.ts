@@ -10,13 +10,18 @@ export const MainContainer = styled.div`
 
 export const HeroContainer = styled.div`
   width: 100%;
-  height: 100vh;
-  background-color: white;
+  height: 90vh;
+  background-color: transparent;
+  mix-blend-mode: multiply;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   color: black;
+  position: relative;
+  pointer-events: none;
+  z-index: 2; /* Only this layer won’t block interactions */
+  isolation: isolate;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -39,6 +44,7 @@ export const TextContainer = styled(motion.div)`
   font-optical-sizing: auto;
   font-style: normal;
   padding: 32px;
+  background-color: transparent;
   @media screen and (max-width: 768px) {
     font-size: 24px;
     width: 100%;
@@ -48,6 +54,7 @@ export const TextContainer = styled(motion.div)`
 export const ImageConatiner = styled.div`
   width: 50%;
   height: auto;
+  background-color: transparent;
   @media screen and (max-width: 768px) {
     height: 60vh;
     width: auto;
@@ -67,7 +74,7 @@ export const DevSpan = styled.span`
 
 export const AboutContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -173,7 +180,7 @@ export const SkillsSubContainer = styled(motion.div)`
   padding: 32px;
 `;
 
-export const SkillItem = styled.div`
+export const SkillItem = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,3 +204,59 @@ export const SkillItem = styled.div`
     color: white;
   }
 `;
+
+export const ContactSectionContaner = styled(motion.div)`
+    display: flex;
+    //padding: 3rem;
+    background-color: transparent;
+    pointer-events: none;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+    
+    `
+
+export const ContactContainer = styled.ul`
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 16px;
+    padding-left: 16px;
+    @media screen and (max-width: 600px) {
+        justify-content: center;
+    }
+    
+`
+
+export const ContactSectionHr = styled.hr`
+    height: 6px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border-radius: 40px;
+    align-items: center;
+    color: black;
+    padding: 0;
+    margin-left: 16rem;
+`
+
+export const ContactHrContainer = styled.div`
+    display: flex;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+    `
+
+export const UrlContainer = styled(motion.a)`
+    text-decoration: none;
+    color: black; /* Inherits color from parent */`

@@ -9,7 +9,8 @@ export const MainContainer = styled.main`
   color: white;
   box-sizing: border-box;
   overflow: hidden;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
 `;

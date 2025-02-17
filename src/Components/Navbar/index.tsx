@@ -27,11 +27,6 @@ const MOBILE_NAV_ITEMS = [
     href: "/experience",
   },
   {
-    id: 2,
-    navTitle: "Projects",
-    href: "/projects",
-  },
-  {
     id: 3,
     navTitle: "Photos",
     href: "/photos",

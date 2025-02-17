@@ -37,13 +37,13 @@ export const TextContainer = styled(motion.div)`
   @media screen and (max-width: 768px) {
     font-size: 24px;
     width: 100%;
+      padding: 0px;
+      padding-top: 32px;
   }
 `;
 
 export const MainContainer = styled.div`
   background-color: black;
-  overflow-y: visible;
-  overflow-x: hidden;
   scrollbar-width: none;
   width: 100%;
   display: flex;
@@ -51,6 +51,10 @@ export const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: auto;
+    
+    @media screen and (max-width: 700px) {
+        
+    }
 `;
 
 export const Headingtext = styled.h2`
@@ -90,12 +94,3 @@ export const EducationCard = styled.div`
   }
 `;
 
-export const ExperienceContainer = styled(motion.div)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-`;

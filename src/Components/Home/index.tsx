@@ -6,7 +6,7 @@ import {
   AboutContainer,
   AboutContent,
   AboutHeader,
-  AboutText,
+  AboutText, ContactContainer, ContactHrContainer, ContactSectionContaner, ContactSectionHr,
   DevSpan,
   HeroContainer,
   ImageConatiner,
@@ -16,19 +16,54 @@ import {
   SkillsContent,
   SkillsHeader,
   SkillsSubContainer,
-  TextContainer,
+  TextContainer, UrlContainer,
 } from "./styles";
 import icons from "./utils";
-//@ts-ignore
-// import CoffeeSip from "../lottieFiles/coffeeSip.svg";
+
+import { styled } from "styled-components";
+
+import Squares from "../../blocks/Backgrounds/Squares/Squares";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Projects from "./projects.tsx";
+import Paragraph from "../Words.tsx";
+
+const AboutMe = [{
+  about : "Now that you want to knoe about me, i am a full stack developer who work on multiple techstacks. " +
+      "But Javascript/Typescript is my favourite. A 2022 graduate from IIT Bhubaneswar and a passionate developer ever since. " +
+      "When I'm not in full-on developer mode, you can find me hovering around in National Parks following my passion for photography."
+}]
+
+const StyledContainer = styled(motion.div)`
+  /* height: 100vh; */
+  width: 100%;
+  border-radius: 0.375rem; /* Equivalent to rounded-md */
+  background-color: #0a0a0a; /* Equivalent to bg-neutral-950 */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased; /* Equivalent to antialiased */
+`;
 
 const HeroSection = () => {
+  const colors = ["#7dd3fc", "#f9a8d4", "#86efac", "#fde047", "#fca5a5"];
+  window.addEventListener("scroll", function () {
+    console.log(window.scrollY);
+  });
   return (
-    <motion.div
+    <StyledContainer
       initial={{ opacity: 0, scale: 1 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
+      <Squares
+        speed={0}
+        squareSize={40}
+        direction="diagonal" // up, down, left, right, diagonal
+        borderColor="#f4f4f4"
+        hoverFillColor={colors}
+      />
       <HeroContainer aria-label="Hero Section" role="banner">
         <ImageConatiner aria-hidden="true">
           <motion.div
@@ -68,7 +103,8 @@ const HeroSection = () => {
           </div>
         </TextContainer>
       </HeroContainer>
-    </motion.div>
+      <ContactSection />
+    </StyledContainer>
   );
 };
 
@@ -77,7 +113,7 @@ const AboutSection = () => {
     <motion.div
       initial={{ opacity: 0, scale: 1 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 2.5 }}
+      transition={{ duration: 1.5 }}
     >
       <AboutContainer>
         <TextContainer
@@ -92,25 +128,10 @@ const AboutSection = () => {
           <AboutContent role="region" aria-labelledby="about-section">
             <section id="about-section">
               <AboutText aria-label="Introduction to myself">
-                I'm a passionate, self-proclaimed designer who specializes in
-                full stack development (React.js & Node.js). I am very
-                enthusiastic about bringing the technical and visual aspects of
-                digital products to life. User experience, pixel perfect design,
-                and writing clear, readable, highly performant code matters to
-                me.
-              </AboutText>
+                {AboutMe.map((about) => {
+                  return (<Paragraph paragraph={about.about}/>)
+                })}
 
-              <AboutText aria-label="My journey as a developer">
-                I began my journey as a web developer in 2022, and since then,
-                I've continued to grow and evolve as a developer, taking on new
-                challenges and learning the latest technologies along the way.
-                I'm building cutting-edge web applications using modern
-                technologies such as React.js, TypeScript, and Node.js.
-              </AboutText>
-
-              <AboutText aria-label="My hobbies outside development">
-                When I'm not in full-on developer mode, you can find me hovering
-                around in National Parks following my passion for photography.
               </AboutText>
             </section>
           </AboutContent>
@@ -143,7 +164,7 @@ const SkillsSection = () => {
         </SkillsHeader>
         <SkillsContent>
           {icons.map(({ Icon, name }) => {
-            //@ts-ignore
+            //@ts-expect-error
             return <IconRenderer Icon={Icon} name={name || "black"} />;
           })}
         </SkillsContent>
@@ -152,10 +173,47 @@ const SkillsSection = () => {
   );
 };
 
+const ContactSection = () => {
+  return (
+    <ContactSectionContaner
+      role="region"
+      aria-labelledby="contact-header"
+    >
+      <ContactHrContainer>
+        <ContactSectionHr />
+      </ContactHrContainer>
+
+      <ContactContainer>
+          <li style={{pointerEvents: 'all'}}>
+            <UrlContainer whileHover={{scale: 1.1}} href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-unsplash fa-2x"></i>
+            </UrlContainer>
+          </li>
+        <li style={{pointerEvents: 'all'}}>
+          <UrlContainer href="https://unsplash.com/@yourusername" target="_blank" rel="noopener noreferrer">
+            <i className="fa-brands fa-github fa-2x"></i>
+          </UrlContainer>
+        </li>
+        <li style={{pointerEvents: 'all'}}>
+          <UrlContainer href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+            <i className="fa-brands fa-linkedin fa-2x"></i>
+          </UrlContainer>
+        </li>
+        <li style={{pointerEvents: 'all'}}>
+          <UrlContainer href="mailto:your.email@example.com">
+            <i className="fa-solid fa-envelope fa-2x"></i>
+          </UrlContainer>
+        </li>
+      </ContactContainer>
+    </ContactSectionContaner>
+  );
+};
+
 const Home = () => {
   return (
     <MainContainer>
       <HeroSection />
+      <Projects/>
       <AboutSection />
       <SkillsSection />
     </MainContainer>

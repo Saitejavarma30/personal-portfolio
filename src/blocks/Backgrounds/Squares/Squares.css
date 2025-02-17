@@ -1,0 +1,15 @@
+/*
+	jsrepo 1.36.0
+	Installed from https://reactbits.dev/ts/default/
+	15-2-2025
+*/
+
+.squares-canvas {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  position: absolute;
+  z-index: 0;
+  background-color: white;
+}
