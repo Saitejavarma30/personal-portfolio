@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { styled } from "styled-components";
 
 
@@ -16,4 +15,7 @@ export const HeadingContainer = styled.div`
     font-size: 2rem;
     width: 60%;
     position: relative;
+    @media screen and (max-width: 800px) {
+        font-size: 1.3rem;
+    }
 `

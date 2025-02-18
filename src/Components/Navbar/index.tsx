@@ -60,7 +60,6 @@ const Navbar = () => {
           </NameContainer>
           <NavBarClose
             onClick={() => {
-              console.log("clicked");
               setIsOpen(true);
             }}
             aria-label="Open Menu"
@@ -81,7 +80,7 @@ const Navbar = () => {
           <NavItemContainer>
             {MOBILE_NAV_ITEMS.map((item) => (
               <NavItem key={item.id}>
-                <Link to={item.href} onClick={() => setIsOpen(false)}>
+                <Link to={item.href} onClick={() => setIsOpen(false)} style={{ textDecoration: "none", color: "white" }}>
                   {item.navTitle}
                 </Link>
               </NavItem>

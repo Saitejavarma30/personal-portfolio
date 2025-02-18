@@ -69,14 +69,14 @@ export const NavBarClose = styled.button`
   padding-left: 32px;
   padding-right: 32px;
   height: 48px;
-  background: transparent;
+  background: black;
   border: none;
   font-optical-sizing: auto;
   font-weight: 400;
   font-size: large;
   font-style: normal;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-display: swap;
+  color: white;
 `;
 
 export const NavbarOpenContainer = styled(motion.div)`

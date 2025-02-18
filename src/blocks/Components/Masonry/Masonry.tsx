@@ -23,6 +23,7 @@ interface MasonryProps {
 
 const Masonry: React.FC<MasonryProps> = ({ data }) => {
   const [columns, setColumns] = useState<number>(2);
+  //@ts-ignore
   const [gap, setGap] = useState<number>(40); // Further increased gap
 
   useEffect(() => {

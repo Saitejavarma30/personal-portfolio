@@ -28,8 +28,8 @@ import Projects from "./projects.tsx";
 import Paragraph from "../Words.tsx";
 
 const AboutMe = [{
-  about : "Now that you want to knoe about me, i am a full stack developer who work on multiple techstacks. " +
-      "But Javascript/Typescript is my favourite. A 2022 graduate from IIT Bhubaneswar and a passionate developer ever since. " +
+  about : "Oh, so you wanna know about me? Well, I'm a full-stack developer who dabbles in all sorts of tech stacks—basically, I press buttons and make things work." +
+      " But JavaScript/TypeScript? That’s my true love. Graduated from IIT Bhubaneswar in 2022 and have been passionately breaking and fixing code ever since!" +
       "When I'm not in full-on developer mode, you can find me hovering around in National Parks following my passion for photography."
 }]
 
@@ -185,22 +185,22 @@ const ContactSection = () => {
 
       <ContactContainer>
           <li style={{pointerEvents: 'all'}}>
-            <UrlContainer whileHover={{scale: 1.1}} href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <UrlContainer whileHover={{scale: 1.1}} href="https://unsplash.com/@saiteja_varma" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-unsplash fa-2x"></i>
             </UrlContainer>
           </li>
         <li style={{pointerEvents: 'all'}}>
-          <UrlContainer href="https://unsplash.com/@yourusername" target="_blank" rel="noopener noreferrer">
+          <UrlContainer href="https://github.com/Saitejavarma30" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-github fa-2x"></i>
           </UrlContainer>
         </li>
         <li style={{pointerEvents: 'all'}}>
-          <UrlContainer href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <UrlContainer href="https://www.linkedin.com/in/j-saiteja-varma/" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-linkedin fa-2x"></i>
           </UrlContainer>
         </li>
         <li style={{pointerEvents: 'all'}}>
-          <UrlContainer href="mailto:your.email@example.com">
+          <UrlContainer href="mailto:saitejavarmaj30@gmail.com">
             <i className="fa-solid fa-envelope fa-2x"></i>
           </UrlContainer>
         </li>

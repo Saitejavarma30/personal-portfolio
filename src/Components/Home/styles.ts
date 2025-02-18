@@ -83,7 +83,7 @@ export const AboutContainer = styled.div`
   color: white;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    height: 130vh;
+    height: 100%;
     background-color: black;
     display: flex;
     justify-content: flex-start;

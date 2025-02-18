@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import {MotionValue} from "framer-motion";
 import styled from 'styled-components';
 
@@ -27,7 +27,7 @@ export default function Paragraph({paragraph}: {paragraph: string}) {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ["start 0.8", "start 0.15"]
+        offset: ["start 0.7", "start 0.3"]
     })
 
     const words = paragraph.split(" ")

@@ -5,8 +5,6 @@ import {
 } from "framer-motion";
 import React, {useEffect, useRef, useState} from "react";
 import styled from "styled-components";
-import ScrollReveal from "../../blocks/TextAnimations/ScrollReveal/ScrollReveal.tsx";
-import Card from "../Experience/card.tsx";
 
 
 
@@ -57,13 +55,6 @@ const ContentContainer = styled(motion.div)`
   }
 `
 
-const JobContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1.5rem;
-    gap: 1rem
-`
-
 // @ts-ignore
 const ContentHolder = ({content}) => {
   return (
@@ -87,7 +78,7 @@ const Timeline: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
 
-  const data = CARD_DATA.map((card, index) => {
+  const data = CARD_DATA.map((card) => {
     return {
       title: card.year,
       content: card.content,
@@ -140,7 +131,7 @@ const Timeline: React.FC = () => {
                     <TimelineContent>
                         <MobileTitle>{item.title}</MobileTitle>
                         {/*<ContentContainer>*/}
-                      <ContentHolder content={item.content} logo={item.logo}/>
+                      <ContentHolder content={item.content}/>
                         {/*</ContentContainer>*/}
 
                     </TimelineContent>
@@ -157,7 +148,7 @@ const Timeline: React.FC = () => {
 };
 
 const Container = styled.div`
-    width: calc(100% - 4rem);
+    width: calc(100% - 8rem);
     background-color: ${({theme}) => theme.bgPrimary};
     font-family: sans-serif;
     padding: 3rem 4rem;
@@ -166,12 +157,14 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   pointer-events: none;
+    margin-bottom: 8rem;
   
   *{
     pointer-events: none;
   }
     
     @media screen and (max-width: 600px) {
+        width: 100%;
         padding: 0;
         
     }
@@ -302,10 +295,5 @@ const MotionLine = styled(motion.div)`
     border-radius: 9999px;
 `;
 
-const ScrollContentContainer = styled.div`
-    display: flex;
-  flex-wrap: wrap;
-  font-size: 2.2rem;
-`
 
 export default Timeline;
