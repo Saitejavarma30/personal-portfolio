@@ -90,3 +90,11 @@ export const NavbarOpenContainer = styled(motion.div)`
   align-items: center;
   background-color: black;
 `;
+
+export const Holder = styled.div`
+  padding: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 200;
+`

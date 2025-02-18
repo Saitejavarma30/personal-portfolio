@@ -1,5 +1,6 @@
-import { useState } from "react";
+import  { useState } from "react";
 import {
+  Holder,
   MainContainer,
   NameContainer,
   NavBarClose,
@@ -14,6 +15,9 @@ import BlurText from "../../blocks/TextAnimations/BlurText/BlurText";
 import { motion } from "framer-motion";
 import { hideNavItemsVariant, mobileMenuVariant } from "./utils";
 import { Link } from "react-router-dom";
+import Dock from "../../blocks/Components/Dock/Dock.tsx";
+import {DockedComponent} from "../Contact/styles.ts";
+import ScrollVelocity from "../../blocks/TextAnimations/ScrollVelocity/ScrollVelocity.tsx";
 
 const MOBILE_NAV_ITEMS = [
   {
@@ -85,7 +89,47 @@ const Navbar = () => {
                 </Link>
               </NavItem>
             ))}
+
           </NavItemContainer>
+
+          <DockedComponent
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+          >
+            <Dock
+                items={[
+                  {
+                    icon: <i className="fa-brands fa-github fa-2x"></i>,
+                    label: "Github",
+                    onClick: () => alert("Github!"),
+                  },
+                  {
+                    icon: <i className="fa-brands fa-linkedin fa-2x"></i>,
+                    label: "LinkedIn",
+                    onClick: () => alert("LinkedIn!"),
+                  },
+                  {
+                    icon: <i className="fa-brands fa-unsplash fa-2x"></i>,
+                    label: "Unsplash",
+                    onClick: () => alert("Unsplash!"),
+                  },
+                  {
+                    icon: <i className="fa-brands fa-instagram fa-2x"></i>,
+                    label: "Instagram",
+                    onClick: () => alert("Instagram!"),
+                  },
+                  {
+                    icon: <i className="fa-brands fa-spotify fa-2x"></i>,
+                    label: "Spotify",
+                    onClick: () => alert("Spotify!"),
+                  },
+                ]}
+                panelHeight={60}
+                baseItemSize={50}
+                magnification={60}
+            />
+          </DockedComponent>
         </NavbarOpenContainer>
       </NavbarContainer>
     </MainContainer>

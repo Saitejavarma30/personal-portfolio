@@ -4,6 +4,7 @@ import Timeline from "../Timeline";
 
 
 import {
+    BackgroundContainer,
   EducationCard,
   EducationContainer,
   Headingtext,
@@ -14,7 +15,7 @@ import MetaBalls from "../../blocks/Animations/MetaBalls/MetaBalls.tsx";
 
 export const ExperienceContent = () => {
   return (<div style={{position: "relative", width: "100%", display: "flex", flexWrap: "wrap"}}>
-        <div style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0}}>
+        <BackgroundContainer>
           <MetaBalls
               color="#ffffff"
               cursorBallColor="#ffffff"
@@ -26,7 +27,7 @@ export const ExperienceContent = () => {
               clumpFactor={1}
               speed={0.8}
           />
-        </div>
+        </BackgroundContainer>
         <div style={{position: "relative", zIndex: 1, width: "100%", pointerEvents: "none"}}>
           <Timeline/>
         </div>

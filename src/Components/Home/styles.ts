@@ -260,3 +260,18 @@ export const ContactHrContainer = styled.div`
 export const UrlContainer = styled(motion.a)`
     text-decoration: none;
     color: black; /* Inherits color from parent */`
+
+
+export const AboutButton = styled(motion.div)`
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 40px;
+    border: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    @media screen and (max-width: 600px) {
+    flex-direction: column;
+}
+`

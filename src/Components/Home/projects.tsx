@@ -7,7 +7,6 @@ import Icon from "./redirect.svg"
 
 import Paragraph from "../Words.tsx";
 import Ribbons from "../../blocks/Animations/Ribbons/Ribbons.tsx";
-import GithubButton from "./githubButton.tsx";
 
 
 
@@ -81,7 +80,6 @@ const HeadingContainer = styled.h3`
     text-align: left;
     gap: 1rem;
     flex-direction: row;
-    align-items: center;
     
     @media screen and (max-width: 900px) {
         flex-direction: column;
@@ -191,10 +189,9 @@ const ProjectContainer: React.FC<{ direction: string, project:  Project}> = ({ d
                     <ContentHolder>
                         <NumberContainer>{project.number}</NumberContainer>
                         <HeadingContainer><Paragraph paragraph={project.name}/>
-                            {/*<UrlIcon href={project.url} target={"_blank"}>*/}
-                            {/*<img src={Icon} alt="Custom Icon"/>*/}
-                            {/*</UrlIcon>*/}
-                            <GithubButton url={project.url}/>
+                            <UrlIcon href={project.url} target={"_blank"}>
+                            <img src={Icon} alt="Custom Icon"/>
+                            </UrlIcon>
                         </HeadingContainer>
                         <DetailsContainer>
                             {project.content}
@@ -220,10 +217,9 @@ const ProjectContainer: React.FC<{ direction: string, project:  Project}> = ({ d
                     <ContentHolder>
                         <NumberContainer>{project.number}</NumberContainer>
                         <HeadingContainer><Paragraph paragraph={project.name}/>
-                            {/*<UrlIcon href={project.url} target={"_blank"}>*/}
-                            {/*<img src={Icon} alt="Custom Icon"/>*/}
-                            {/*</UrlIcon>*/}
-                            <GithubButton url={project.url}/>
+                            <UrlIcon href={project.url} target={"_blank"}>
+                            <img src={Icon} alt="Custom Icon"/>
+                            </UrlIcon>
                         </HeadingContainer>
                         <DetailsContainer>
                             {project.content}

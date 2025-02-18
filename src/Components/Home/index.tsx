@@ -3,6 +3,7 @@ import AboutLottie from "../lottieFiles/about";
 import CoffeeSip from "../lottieFiles/coffeeSip";
 import { IconRenderer } from "./Icon";
 import {
+  AboutButton,
   AboutContainer,
   AboutContent,
   AboutHeader,
@@ -26,11 +27,12 @@ import Squares from "../../blocks/Backgrounds/Squares/Squares";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Projects from "./projects.tsx";
 import Paragraph from "../Words.tsx";
+import GithubButton from "./githubButton.tsx";
 
 const AboutMe = [{
   about : "Oh, so you wanna know about me? Well, I'm a full-stack developer who dabbles in all sorts of tech stacks—basically, I press buttons and make things work." +
       " But JavaScript/TypeScript? That’s my true love. Graduated from IIT Bhubaneswar in 2022 and have been passionately breaking and fixing code ever since!" +
-      "When I'm not in full-on developer mode, you can find me hovering around in National Parks following my passion for photography."
+      " When I'm not in full-on developer mode, you can find me hovering around in National Parks following my passion for photography."
 }]
 
 const StyledContainer = styled(motion.div)`
@@ -133,6 +135,10 @@ const AboutSection = () => {
                 })}
 
               </AboutText>
+              <AboutButton>
+                <GithubButton url={"/experience"} text={"Dev Journey"} />
+                <GithubButton url={"/photos"} text={"Photography"} />
+              </AboutButton>
             </section>
           </AboutContent>
         </TextContainer>
