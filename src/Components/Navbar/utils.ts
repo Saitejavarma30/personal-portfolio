@@ -11,7 +11,7 @@ export const hideNavItemsVariant = {
     opacity: 1,
     y: "0%",
     transition: {
-      delay: 1.63,
+      delay: 1.2,
       duration: 0.5,
       ease: "easeInOut",
     },
@@ -23,7 +23,7 @@ export const mobileMenuVariant = {
     y: "0%",
     transition: {
       delay: 0.15,
-      duration: 2.1,
+      duration: 1.2,
       ease: [0.74, 0, 0.19, 1.02],
     },
   },
@@ -31,7 +31,7 @@ export const mobileMenuVariant = {
     y: "-120%",
     transition: {
       delay: 0.35,
-      duration: 1.63,
+      duration: 1.2,
       ease: [0.74, 0, 0.19, 1.02],
     },
   },

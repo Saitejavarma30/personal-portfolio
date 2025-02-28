@@ -1,6 +1,5 @@
 import {ContactTextContainer} from "./styles.ts";
 import {motion} from "framer-motion";
-import ScrollVelocity from "../../blocks/TextAnimations/ScrollVelocity/ScrollVelocity.tsx";
 
 
 const ContactHeader = () => {

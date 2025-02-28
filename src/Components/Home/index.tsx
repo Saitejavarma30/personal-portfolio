@@ -28,6 +28,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Projects from "./projects.tsx";
 import Paragraph from "../Words.tsx";
 import GithubButton from "./githubButton.tsx";
+import ResumeDownloadButton from "../resume.tsx";
+import {ToastContainer} from "react-toastify";
+import React from "react";
 
 const AboutMe = [{
   about : "Oh, so you wanna know about me? Well, I'm a full-stack developer who dabbles in all sorts of tech stacks—basically, I press buttons and make things work." +
@@ -59,6 +62,7 @@ const HeroSection = () => {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
+      <ToastContainer style={{ zIndex: 9999 }} />
       <Squares
         speed={0}
         squareSize={40}
@@ -102,6 +106,9 @@ const HeroSection = () => {
             <span aria-label="Location">
               Based in <NameSpan>India</NameSpan>
             </span>
+          </div>
+          <div style={{pointerEvents:'auto'}}>
+            <ResumeDownloadButton/>
           </div>
         </TextContainer>
       </HeroContainer>

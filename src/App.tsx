@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar";
 import Photography from "./Components/photography";
 import ScrollToTop from "./scrollToTop.tsx";
 import Contact from "./Components/Contact";
+import "./App.css"
 
 function App() {
   return (

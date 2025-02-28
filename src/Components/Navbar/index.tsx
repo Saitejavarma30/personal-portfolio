@@ -1,6 +1,5 @@
-import  { useState } from "react";
+import React, { useState } from "react";
 import {
-  Holder,
   MainContainer,
   NameContainer,
   NavBarClose,
@@ -14,10 +13,11 @@ import {
 import BlurText from "../../blocks/TextAnimations/BlurText/BlurText";
 import { motion } from "framer-motion";
 import { hideNavItemsVariant, mobileMenuVariant } from "./utils";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import Dock from "../../blocks/Components/Dock/Dock.tsx";
 import {DockedComponent} from "../Contact/styles.ts";
-import ScrollVelocity from "../../blocks/TextAnimations/ScrollVelocity/ScrollVelocity.tsx";
+import {toast, ToastContainer} from "react-toastify";
+
 
 const MOBILE_NAV_ITEMS = [
   {
@@ -42,15 +42,31 @@ const MOBILE_NAV_ITEMS = [
   },
 ];
 
-const Navbar = () => {
+const Navbar:React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   console.log(isOpen);
   const handleAnimationComplete = () => {
     console.log("Animation completed!");
   };
 
+  const handleDownload = () => {
+    const fileId = "1YLZoqJd2oqHOo_svovBx_6UYz4Vgodv0"; // Replace with your actual file ID
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    toast.success("Downloading file in a few seconds", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.setAttribute("download", "Saiteja_Varma_Resume.pdf"); // Set file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link)
+  };
+
   return (
     <MainContainer>
+      <ToastContainer style={{ zIndex: 9999 }} />
       <NavbarContainer initial="closed" animate={isOpen ? "opened" : "closed"}>
         <NavBarTopBar variants={hideNavItemsVariant}>
           <NameContainer aria-label="Go to homepage" role="link" href="/">
@@ -102,27 +118,27 @@ const Navbar = () => {
                   {
                     icon: <i className="fa-brands fa-github fa-2x"></i>,
                     label: "Github",
-                    onClick: () => alert("Github!"),
+                    onClick: () => window.open("https://github.com/Saitejavarma30", "_blank"),
                   },
                   {
                     icon: <i className="fa-brands fa-linkedin fa-2x"></i>,
                     label: "LinkedIn",
-                    onClick: () => alert("LinkedIn!"),
+                    onClick: () => window.open("https://www.linkedin.com/in/j-saiteja-varma/", "_blank"),
                   },
                   {
                     icon: <i className="fa-brands fa-unsplash fa-2x"></i>,
                     label: "Unsplash",
-                    onClick: () => alert("Unsplash!"),
+                    onClick: () => window.open("https://unsplash.com/@saiteja_varma", "_blank"),
                   },
                   {
                     icon: <i className="fa-brands fa-instagram fa-2x"></i>,
                     label: "Instagram",
-                    onClick: () => alert("Instagram!"),
+                    onClick: () => window.open("https://www.instagram.com/i_am_tez_/", "_blank"),
                   },
                   {
-                    icon: <i className="fa-brands fa-spotify fa-2x"></i>,
-                    label: "Spotify",
-                    onClick: () => alert("Spotify!"),
+                    icon: <i className="fas fa-file-download fa-2x"></i>,
+                    label: "Resume",
+                    onClick: () => handleDownload(),
                   },
                 ]}
                 panelHeight={60}

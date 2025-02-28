@@ -39,6 +39,9 @@ export const TextContainer = styled(motion.div)`
   width: 50%;
   color: black;
   text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   font-family: "Playfair Display", serif;
   font-display: swap;
   font-optical-sizing: auto;

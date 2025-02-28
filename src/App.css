@@ -1,0 +1,8 @@
+.Toastify__toast--success {
+    color: #000000 !important;
+}
+
+:root {
+    --toastify-icon-color-success: #000 !important;
+    --toastify-color-progress-success: #000 !important;
+}

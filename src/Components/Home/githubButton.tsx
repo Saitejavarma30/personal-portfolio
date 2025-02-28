@@ -1,8 +1,9 @@
 
 
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
-const GithubButtonContainer = styled.a`
+const GithubButtonContainer = styled.div`
   cursor: pointer;
   display: flex;
   gap: 0.5rem;
@@ -40,9 +41,14 @@ const GithubButtonContainer = styled.a`
 const GithubButton = ({url, text="View on Github"}: {url: string, text: string}) => {
 
     return (
-        <GithubButtonContainer href={url}>
-            <span>{text}</span>
-        </GithubButtonContainer>
+
+            <Link to={url} style={{ textDecoration: "none" }}>
+                <GithubButtonContainer>
+                    <span>{text}</span>
+                </GithubButtonContainer>
+            </Link>
+
+
 
     )
 }
