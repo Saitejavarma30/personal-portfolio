@@ -69,7 +69,7 @@ const Navbar:React.FC = () => {
       <ToastContainer style={{ zIndex: 9999 }} />
       <NavbarContainer initial="closed" animate={isOpen ? "opened" : "closed"}>
         <NavBarTopBar variants={hideNavItemsVariant}>
-          <NameContainer aria-label="Go to homepage" role="link" href="/">
+          <NameContainer aria-label="Go to homepage" role="link" href={import.meta.env.BASE_URL}>
             <BlurText
               text="Saiteja Varma"
               delay={150}
