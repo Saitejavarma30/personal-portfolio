@@ -9,13 +9,13 @@ export default defineConfig({
     react(),
     visualizer({
       filename: "./dist/stats.html", // Output file
-      open: true, // Automatically open the report
+      open: false, // Automatically open the report
       gzipSize: true, // Show gzip size
       brotliSize: true, // Show brotli size
     }),
     compression({ algorithm: "brotliCompress" }),
   ],
-  base: "/",
+  base: "/personal-portfolio/",
   build: {
     sourcemap: true,
   },

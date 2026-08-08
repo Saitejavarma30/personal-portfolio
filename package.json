@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://www.saitejavarma.in",
+  "homepage": "https://saitejavarma30.github.io/personal-portfolio",
   "scripts": {
     "dev": "vite --host",
     "build": "tsc -b && vite build",
@@ -26,6 +26,7 @@
     "react-router-dom": "^7.1.3",
     "react-toastify": "^11.0.3",
     "react-useanimations": "^2.10.0",
+    "styled-components": "^6.5.1",
     "tech-stack-icons": "^2.1.0"
   },
   "devDependencies": {
