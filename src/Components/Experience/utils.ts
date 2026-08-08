@@ -1,7 +1,7 @@
 export const CARD_DATA = [
   {
     title: "Full Stack Developer at Flipkart",
-    logo: "/flipkart.svg",
+    logo: import.meta.env.BASE_URL + "flipkart.svg",
     timeline: "Nov 2022 - Present",
     content: `As a full stack developer at Flipkart, I led the development and
         implementation of GraphQL APIs to cater to the needs of multiple teams,
@@ -16,7 +16,7 @@ export const CARD_DATA = [
   },
   {
     title: "Software Intern at Optum Healthcare",
-    logo: "/optum.svg",
+    logo: import.meta.env.BASE_URL + "optum.svg",
     timeline: "May 2021 - July 2021",
     content: `As a software intern at Optum Healthcare, 
         I implemented a prototype for Load Balancing of streaming data across
@@ -32,7 +32,7 @@ export const CARD_DATA = [
   {
     title: "Web developer Intern at SpiderG",
     timeline: "Sep 2020 - Apr 2021",
-    logo: "/dutypar.svg",
+    logo: import.meta.env.BASE_URL + "dutypar.svg",
     content: `As a web developer intern at SpiderG, 
         I designed and maintained a WordPress website for Dutypar, a sister
         company, ensuring a seamless user experience and high performance. I

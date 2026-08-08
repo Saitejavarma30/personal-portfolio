@@ -12,32 +12,32 @@ import styled from "styled-components";
 const CARD_DATA:{year: number, logo: string, content: string}[] = [
   {
     "year": 2020,
-    "logo": "/dutypar.svg",
+    "logo": import.meta.env.BASE_URL + "dutypar.svg",
     "content": "This was the year I got introduced to frontend development. Due to COVID, everything was done remotely, so I decided to give it a try and apply for internships. I started working for Dutypar, an early-stage startup, where I built and maintained their website from scratch."
   },
   {
     "year": 2021,
-    logo: "/optum.svg",
+    logo: import.meta.env.BASE_URL + "optum.svg",
     "content": "I continued working with Dutypar, where I built my first Node.js project (Invoice Generator). I also worked at Optum as a backend developer, contributing to building a prototype for a load balancer using Kafka and Azure Event Hubs (a close replica of the prototype is available)."
   },
   {
     "year": 2022,
-    logo: "/flipkart.svg",
+    logo: import.meta.env.BASE_URL + "flipkart.svg",
     "content": "I joined my first full-time job as a Full Stack Developer at Flipkart in July 2022. Here, I gained experience with frontend technologies like React, React Native, and TypeScript. For the next few months, I worked on React Native, launching a mobile feature that had previously been released on the web. This role helped me gain expertise in React, React Native, and GraphQL."
   },
   {
     "year": 2023,
-    logo: "/flipkart.svg",
+    logo: import.meta.env.BASE_URL + "flipkart.svg",
     "content": "After working for almost 6–7 months exclusively on React and React Native, I transitioned to backend development, working with MySQL, Elasticsearch, and Java. This also marked the first time my code caused a production issue—although it lasted only 15 minutes at midnight, it was a learning experience. During this time, I also worked with Python and started taking ownership of projects previously managed by my team."
   },
   {
     "year": 2024,
-    logo: "/flipkart.svg",
+    logo: import.meta.env.BASE_URL + "flipkart.svg",
     "content": "This year has been one of the best in my professional career. I delivered a major project by developing the UI for a feature from scratch, impacting over ₹2300Cr GMV. I also led the migration of a legacy Django project into a React-based micro frontend. One of my key achievements was optimizing a computational job, reducing its runtime from 9 hours to 3 hours, which allowed me to dive deep into Apache Spark.  I also took on backend projects, such as building my own HTTP server and implementing a Redis-like system."
   },
   {
     "year": 2025,
-    logo: "/flipkart.svg",
+    logo: import.meta.env.BASE_URL + "flipkart.svg",
     "content": "I was promoted to SDE-II at the start of 2025. I played a key role in the release of a major feature, ensuring a seamless rollout with high performance and scalability. Additionally, I contributed to the migration of our backend infrastructure from JDK 8 to JDK 17, optimizing performance and security. This year also marked my increased involvement in system design discussions, contributing to the planning and scalability improvements of various projects. 2025 also marked as the year where i have done my first open source contribution"
   }
 ]

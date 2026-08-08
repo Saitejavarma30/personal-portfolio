@@ -29,7 +29,7 @@ const icons = [
 export default icons;
 
 export const PROJECT_DETAILS = [{
-  image: "/portfolio-ss.png",
+  image: import.meta.env.BASE_URL + "portfolio-ss.png",
   number: "01",
   name: "My Portfolio",
   content: "Ohh this!! its just the same website that you are looking it. Its also my favourite works. So had to put it at the top. Worked on framer-motion, got to contribute to react-bits(open-source library) because of a bug i encountered",

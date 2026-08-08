@@ -170,7 +170,7 @@ const TechIcon = ({ tech }: { tech: string }) => {
             style={{ position: "relative", display: "inline-block" }}
 
         >
-            <img src={`/${tech}.svg`} alt={tech} style={{ width: 25, height: 25, cursor: "pointer" }} />
+            <img src={`${import.meta.env.BASE_URL}${tech}.svg`} alt={tech} style={{ width: 25, height: 25, cursor: "pointer" }} />
 
                 <Tooltip
                 >
